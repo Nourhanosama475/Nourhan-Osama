@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .task {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      color: white;
+    }
+    .task button {
+      margin-left: 10px;
+    }
+    .red { background-color: red; }
+    .orange { background-color: orange; }
+    .green { background-color: green; }
+  </style>
+</head>
+<body>
+    <h2>Task Manager Application</h2>
+
+  <input type="text" id="taskName" placeholder="Enter Task Name">
+  <select id="taskType">
+    <option value="Task">Task</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Done">Done</option>
+  </select>
+  <button onclick="addTask()">Add Task</button>
+
+  <br><br>
+  <input type="text" id="searchInput" placeholder="Search by task name" oninput="renderTasks()">
+  <select id="filterType" onchange="renderTasks()">
+    <option value="">All Types</option>
+    <option value="Task">Task</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Done">Done</option>
+  </select>
+
+  <ul id="taskList"></ul>
+  <script src="main.js"></script>
+</body>
+</html>
