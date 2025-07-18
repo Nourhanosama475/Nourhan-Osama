@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h2>Countdown Timer</h2>
+
+  <form id="registrationForm">
+    <label for="eventName">Event Name:</label>
+    <input type="text" id="eventName" placeholder="eventName" required>
+
+    <label for="timeRemaining">Time Remaining (seconds):</label>
+    <input type="number" id="timeRemaining" placeholder="timeRemaining" min="1" required>
+
+    <button type="submit">Start Countdown</button>
+  </form>
+
+  <!-- شريط البحث -->
+  <div class="event-section">
+    <label for="searchBar"><strong>All Events    </strong></label>
+    <input type="text" id="searchBar" placeholder="Search Event">
+  </div>
+
+  <!-- عرض الأحداث -->
+  <div class="event-section">
+    <h3>The countdown to the events</h3>
+    <div id="eventList"></div>
+  </div>
+    <script src="main.js"></script>
+</body>
+</html>
