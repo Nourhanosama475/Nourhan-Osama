@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration Form</title>
+    <link rel="stylesheet" href="/index.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Product Registration</h1>
+        <form id="productForm">
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="price" placeholder="Price" min="0" required>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Clothing">Clothing</option>
+                <option value="Home">Home</option>
+            </select>
+            <label>
+                <input type="checkbox" id="availability"> Available
+            </label>
+            <button type="submit" id="submitBtn">Add Product</button>
+        </form>
+
+        <input type="text" id="search" placeholder="Search by Product Name or Category">
+        <select id="filterCategory">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Home">Home</option>
+        </select>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th class="availability-header">Status</th> 
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>
